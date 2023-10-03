@@ -11,7 +11,7 @@ resource "azurerm_service_plan" "func_plan" {
   resource_group_name = var.resource_group_name
   location            = var.location
   os_type             = "Linux"
-  sku_name            = "Y1" # Y1 is the cheapest pricing tier. 'Y' stands for Dynamic. That means Consumption Plan.
+  sku_name            = var.function_sku
 }
 
 resource "azurerm_linux_function_app" "func" {

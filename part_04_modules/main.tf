@@ -15,4 +15,5 @@ module "backend" {
   location                 = azurerm_resource_group.my_resource_group.location
   resource_group_name      = azurerm_resource_group.my_resource_group.name
   environment              = var.environment
+  function_sku             = "Y1" # Y1 is the cheapest pricing tier. 'Y' stands for Dynamic. That means Consumption Plan.
 }
